@@ -219,7 +219,7 @@ article {
 }
 
 article {
-  display: none;
+  display: block; /* Routed pages render individually, so keep articles visible by default */
 }
 
 article.active {
