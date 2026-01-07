@@ -1,10 +1,12 @@
 import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faBook, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { Education, Experience, Skill } from '../../modals/app.modals';
 
 @Component({
   selector: 'app-resume',
-  imports: [DatePipe],
+  imports: [DatePipe, FontAwesomeModule],
   templateUrl: './resume.html',
   styleUrl: './resume.css',
 })
@@ -64,4 +66,8 @@ export class Resume {
       yearsOfExperience: 2,
     },
   ];
+
+  // Icons
+  experienceIcon = faBook;
+  educationIcon = faBriefcase;
 }
