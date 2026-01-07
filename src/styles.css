@@ -219,7 +219,7 @@ article {
 }
 
 article {
-  display: block; /* Routed pages render individually, so keep articles visible by default */
+  display: block;
 }
 
 article.active {
@@ -849,7 +849,11 @@ main {
 .timeline-item-title {
   font-size: var(--fs-6);
   line-height: 1.3;
-  margin-bottom: 7px;
+}
+.timeline-item-company {
+  color: var(--white-1);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-8);
 }
 
 .timeline-list span {
@@ -1009,6 +1013,18 @@ main {
 .project-item.active {
   display: block;
   animation: scaleUp 0.25s ease forwards;
+}
+
+.company-title-item {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-items: center;
+}
+.company-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
 }
 
 @keyframes scaleUp {

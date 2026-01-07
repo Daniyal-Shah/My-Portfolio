@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminLogin } from '../admin-login/admin-login';
-import { Dashboard } from '../dashboard/dashboard';
+import { AdminLogin } from '../../components/admin-login/admin-login';
+import { Dashboard } from '../../components/dashboard/dashboard';
 
 const routes: Routes = [
   { path: '', component: AdminLogin },

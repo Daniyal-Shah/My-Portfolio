@@ -7,6 +7,8 @@
     <h2 class="h2 article-title">Resume</h2>
   </header>
 
+  <!-- Experience Container -->
+  @if(experience.length > 0) {
   <section class="timeline">
     <div class="title-wrapper">
       <div class="icon-box">
@@ -17,41 +19,25 @@
     </div>
 
     <ol class="timeline-list">
+      @for(exp of experience; track exp.id) {
       <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Creative director</h4>
-
-        <span>2015 — Present</span>
-
+        <h4 class="h4 timeline-item-title">{{ exp.title }}</h4>
+        <h6 class="timeline-item-company">{{ exp.company }}</h6>
+        <span
+          >{{ exp.startYear | date : "MMM yyyy" }} —
+          {{ exp.endYear | date : "MMM yyyy" }}</span
+        >
         <p class="timeline-text">
-          Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit
-          atque corrupti, quos dolores et qvuas molestias exceptur.
+          {{ exp.description }}
         </p>
       </li>
-
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Art director</h4>
-
-        <span>2013 — 2015</span>
-
-        <p class="timeline-text">
-          Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit
-          atque corrupti, quos dolores et quas molestias exceptur.
-        </p>
-      </li>
-
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">Web designer</h4>
-
-        <span>2010 — 2013</span>
-
-        <p class="timeline-text">
-          Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit
-          atque corrupti, quos dolores et quas molestias exceptur.
-        </p>
-      </li>
+      }
     </ol>
   </section>
+  }
 
+  <!-- Education Container -->
+  @if(education.length > 0) {
   <section class="timeline">
     <div class="title-wrapper">
       <div class="icon-box">
@@ -62,41 +48,25 @@
     </div>
 
     <ol class="timeline-list">
+      @for(edu of education; track edu.id) {
       <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">University school of the arts</h4>
+        <h4 class="h4 timeline-item-title">{{ edu.degree }}</h4>
 
-        <span>2007 — 2008</span>
-
+        <span
+          >{{ edu.startYear | date : "MMM yyyy" }} —
+          {{ edu.endYear | date : "MMM yyyy" }}</span
+        >
         <p class="timeline-text">
-          Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit
-          atque corrupti, quos dolores et quas molestias exceptur.
+          {{ edu.description }}
         </p>
       </li>
-
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-        <span>2006 — 2007</span>
-
-        <p class="timeline-text">
-          Ratione voluptatem sequi nesciunt, facere quisquams facere menda
-          ossimus, omnis voluptas assumenda est omnis..
-        </p>
-      </li>
-
-      <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-        <span>2002 — 2004</span>
-
-        <p class="timeline-text">
-          Duis aute irure dolor in reprehenderit in voluptate, quila voluptas
-          mag odit aut fugit, sed consequuntur magni dolores eos.
-        </p>
-      </li>
+      }
     </ol>
   </section>
+  }
 
+  <!-- Skills Container -->
+  @if(skills.length > 0) {
   <section class="skill">
     <h3 class="h3 skills-title">My skills</h3>
 
@@ -146,4 +116,5 @@
       </li>
     </ul>
   </section>
+  }
 </article>

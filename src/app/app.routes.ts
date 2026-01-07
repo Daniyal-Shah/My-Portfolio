@@ -5,7 +5,7 @@ export const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('./portfolio-routing/portfolio-module').then(
+      import('./modules/portfolio-routing/portfolio-module').then(
         (m) => m.PortfolioModule
       ),
   },
@@ -13,7 +13,7 @@ export const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () =>
-      import('./admin-routing/admin-module').then((m) => m.AdminModule),
+      import('./modules/admin-routing/admin-module').then((m) => m.AdminModule),
   },
   { path: '**', redirectTo: '' },
 ];
